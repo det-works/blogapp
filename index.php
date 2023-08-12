@@ -1,7 +1,8 @@
 <?php
     $path = $_GET['path'] ?? 'home';
 
-    $templates = array('home' => 'templates/home.php');
+    $templates = array('home' => 'templates/home.php',
+                       'register' => 'templates/register.php');
 
     if(array_key_exists($path, $templates))
     {
@@ -13,7 +14,14 @@
         }
         else
         {
-            include "templates/sign-in.php";
+            if($path === 'register') 
+            {
+                include_once "$templatePagePath";
+            }
+            else 
+            {
+                include "templates/sign-in.php";
+            }
         }
     }
     else

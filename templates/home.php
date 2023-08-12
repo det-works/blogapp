@@ -2,8 +2,8 @@
 <html>
     <head>
         <?php
-            include_once "components/meta_basic.php";
-            include_once "components/meta_css_header.php";
+            include_once "components/meta/meta_basic.php";
+            include_once "components/meta/meta_css_header.php";
         ?>
         <title>My Blog App - Home</title>
     </head>
