@@ -1,0 +1,66 @@
+/*
+    Take up 100% of the screen. Remove default margins.
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+    height: inherit;
+}
+
+#sign-in {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#sign-in form > p {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+#sign-in > form {
+    margin: 0;
+}
+
+/*
+    Form design.
+*/
+
+form {
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem;
+    width: 20rem;
+}
+
+form input {
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 1rem;
+    height: 20px;
+    width: 10rem;
+}
+
+form input[type='submit'] {
+    background-color: rgb(81, 250, 81);
+    border: none;
+    font-weight: bold;
+    height: 2rem;
+}
+
+form input[type='submit']:hover {
+    background-color: rgb(93, 209, 118);
+    cursor: pointer;
+}

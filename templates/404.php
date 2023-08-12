@@ -3,8 +3,9 @@
     <head>
         <?php
             include_once "components/meta_basic.php";
+            include_once "components/meta_css_header.php";
         ?>
-        <title>My Blog App</title>
+        <title>My Blog App - 404</title>
     </head>
     <body>
         <?php
