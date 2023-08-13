@@ -9,7 +9,9 @@
     </head>
     <body>
         <?php
-            include_once "components/header.php"
+            include_once "components/header.php";
+            $profile_user = $_SESSION['user'];
+            echo "<h2>Hello, $profile_user</h2>"
         ?>
     </body>
 </html>

@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $path = $_GET['path'] ?? 'home';
 
     $templates = array('home' => 'templates/home.php',
@@ -10,7 +12,7 @@
         // Check if user is signed in.
         if(isset($_SESSION['user'])) 
         {
-            include "$templatePagePath";
+            include_once "$templatePagePath";
         }
         else
         {
@@ -20,13 +22,13 @@
             }
             else 
             {
-                include "templates/sign-in.php";
+                include_once "templates/sign-in.php";
             }
         }
-    }
-    else
-    {
-        http_response_code(404);
-        include 'templates/404.php';
-    }
+        }
+        else
+        {
+            http_response_code(404);
+            include_once 'templates/404.php';
+        }
 ?>

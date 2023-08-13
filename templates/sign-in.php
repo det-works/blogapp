@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if($_SESSION['user'])
+    {
+        header('Location: home');
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,11 +18,12 @@
         <div id='sign-in'>
             <form>
                 <p>My Blog App</p>
-                <input type='text' placeholder='Username'>
-                <input type='password' placeholder='Password'>
+                <input id="username" type='text' placeholder='Username'>
+                <input id="password" type='password' placeholder='Password'>
                 <input type='submit' value='Log in'>
                 <a href='./register'>Sign up</a>
             </form>
         </div>
+        <script src='assets/js/signIn.js'></script>
     </body>
 </html>
